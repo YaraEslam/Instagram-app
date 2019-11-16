@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:background="@android:color/white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_item"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guide_home_left"
+        android:src="@drawable/ic_person_black_24dp"
+        app:civ_border_width="0dp"/>
+
+    <TextView
+        android:id="@+id/home_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/img_item"
+        app:layout_constraintBottom_toBottomOf="@id/img_item"
+        app:layout_constraintStart_toEndOf="@id/img_item"
+        android:text="@string/profile_name"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
+
+    <ImageButton
+        android:id="@+id/home_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/img_item"
+        app:layout_constraintBottom_toBottomOf="@id/img_item"
+        app:layout_constraintEnd_toEndOf ="@id/guide_home_right"
+        android:src="@drawable/ic_more_vert_black"
+        android:background="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/home_image"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        app:layout_constraintTop_toBottomOf="@id/img_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/profile"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="8dp"/>
+
+    <ImageButton
+        android:id="@+id/home_love"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/home_image"
+        app:layout_constraintStart_toStartOf="@id/guide_home_left"
+        android:src="@drawable/ic_favorite_border_black"
+        android:background="@android:color/white"
+        android:layout_marginTop="8dp"/>
+
+    <ImageButton
+        android:id="@+id/home_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/home_image"
+        app:layout_constraintStart_toEndOf="@id/home_love"
+        android:src="@drawable/ic_comment_black"
+        android:background="@android:color/white"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp" />
+
+    <ImageButton
+        android:id="@+id/home_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/home_image"
+        app:layout_constraintEnd_toEndOf="@id/guide_home_right"
+        android:src="@drawable/ic_near_me_black"
+        android:background="@android:color/white"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight= "4dp"
+        android:layout_marginEnd="4dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_comment1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@id/home_love"
+        app:layout_constraintStart_toStartOf="@id/guide_home_left"
+        android:src="@drawable/ic_person_black_24dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#000000"
+        android:layout_marginTop="8dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_comment2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@id/home_love"
+        app:layout_constraintStart_toEndOf="@id/img_comment1"
+        android:src="@drawable/ic_person_black_24dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#000000"
+        android:layout_marginTop="8dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_comment3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@id/home_love"
+        app:layout_constraintStart_toEndOf="@id/img_comment2"
+        android:src="@drawable/ic_person_black_24dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#000000"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/home_like_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/img_comment3"
+        app:layout_constraintBottom_toBottomOf="@id/img_comment3"
+        app:layout_constraintStart_toEndOf="@id/img_comment3"
+        android:text="Liked by"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/comment_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/img_comment1"
+        app:layout_constraintStart_toEndOf="@id/guide_home_left"
+        android:text="@string/profile_name"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/img_comment1"
+        app:layout_constraintStart_toEndOf="@id/comment_name"
+        android:text="comment                          "
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/comment"
+        app:layout_constraintStart_toStartOf="@id/guide_home_left"
+        app:layout_constraintEnd_toEndOf="@id/guide_home_right"
+        android:hint="@string/add_comment"
+        android:background="@drawable/back_white_edit_text"
+        android:drawableRight="@drawable/ic_favorite_border_black"
+        android:drawableEnd="@drawable/ic_favorite_border_black" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_home_left"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_home_right"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".95"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
